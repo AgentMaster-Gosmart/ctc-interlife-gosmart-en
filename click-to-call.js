@@ -194,13 +194,13 @@
           listener: function (e) {
             switch (e.type) {
               case "connecting":
-                self.statusText = "Conectando...";
+                self.statusText = "Connecting...";
                 self.fireUpdate();
                 break;
               case "connected":
                 self.connecting = false;
                 self.connected = true;
-                self.statusText = "Conectado";
+                self.statusText = "Connected ";
                 self.fireUpdate();
                 break;
               case "terminating":
@@ -216,7 +216,7 @@
                 self.connecting = false;
                 self.connected = false;
                 self.session = null;
-                self.statusText = "Llamada terminada";
+                self.statusText = "Terminated";
                 self.fireUpdate();
                 break;
               case "i_ao_request":
@@ -224,7 +224,7 @@
                   e.getSipResponseCode() === 180 ||
                   e.getSipResponseCode() === 183
                 ) {
-                  self.statusText = "Sonando...";
+                  self.statusText = "Ringing...";
                   self.fireUpdate();
                 }
                 break;
