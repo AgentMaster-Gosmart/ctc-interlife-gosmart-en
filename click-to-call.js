@@ -422,12 +422,12 @@ class ClickToCall extends HTMLElement {
     if (ua.connected) {
       button.classList.add("btn-warn");
       button.classList.remove("btn-normal");
-      button.textContent = "Colgar";
+      button.textContent = "End call";
     } else {
       if (ua.connecting) {
         button.classList.add("btn-normal");
         button.classList.remove("btn-warn");
-        button.textContent = "Llamando...";
+        button.textContent = "Calling...";
       } else {
         button.classList.add("btn-normal");
         button.classList.remove("btn-warn");
